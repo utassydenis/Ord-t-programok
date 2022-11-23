@@ -1,0 +1,11 @@
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\bin\Debug\Beadando.exe.config
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\bin\Debug\Beadando.exe
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\bin\Debug\Beadando.pdb
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.csproj.AssemblyReference.cache
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.csproj.SuggestedBindingRedirects.cache
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.Form1.resources
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.Properties.Resources.resources
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.csproj.GenerateResource.cache
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.csproj.CoreCompileInputs.cache
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.exe
+C:\Users\utass\Desktop\FordítóprogramokBeadandó\Beadando\Beadando\obj\Debug\Beadando.pdb

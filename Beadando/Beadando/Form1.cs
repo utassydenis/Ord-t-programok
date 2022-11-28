@@ -24,15 +24,14 @@ namespace Beadando
             
             InitializeComponent();
             warningLbl.Text = "";
+            verem = new Stack<string>();
+            //verem.Push("#");
         }
 
         private void inputOKBtn_Click(object sender, EventArgs e)
         {
             if (inputTxtBx.Text != "")
             {
-                verem = new Stack<string>();
-                verem.Push("#");
-                verem.Push("E");
                 index = 0;
                 szabaly = "";
                 string initialInput = inputTxtBx.Text;
@@ -50,14 +49,15 @@ namespace Beadando
                 }
                 inputSzalag = new String(convertInput.ToArray());
 
-
                 if (!inputSzalag.EndsWith("#"))
                 {
                     inputSzalag += "#";
                 }
                 convertedInputTxtBx.Text = inputSzalag;
+                /*
                 combo = new Tuple<string, string, string>(inputSzalag, veremTartalom(), szabaly);
                 stepsTxtBx.AppendText("\n"+combo+"\n");
+                */
 
                 warningLbl.Text = "Input sikeresen átadva.";
             }
@@ -72,6 +72,10 @@ namespace Beadando
         {
             if (inputSzalag != "" && pathTxtBx.Text != "")
             {
+                verem.Push("#");
+                verem.Push(szabalyokDataGridView.Rows[0].Cells[0].Value.ToString());
+                combo = new Tuple<string, string, string>(inputSzalag, veremTartalom(), szabaly);
+                stepsTxtBx.AppendText("\n" + combo + "\n");
                 int rowIndex = -1;
                 while(index < inputSzalag.Length)
                 {
@@ -124,10 +128,10 @@ namespace Beadando
                                 }
                             }
                             szabaly += parts[1].ToString();
-                        }
-                        combo = new Tuple<string, string, string>(inputSzalag.Substring(index), veremTartalom(), szabaly);
-                        stepsTxtBx.AppendText(combo + "\n");
+                        } 
                     }
+                    combo = new Tuple<string, string, string>(inputSzalag.Substring(index), veremTartalom(), szabaly);
+                    stepsTxtBx.AppendText(combo + "\n");
                 }
             }
             else
@@ -139,9 +143,11 @@ namespace Beadando
 
         private void browseBtn_Click(object sender, EventArgs e)
         {
+            pathTxtBx.Text = "";
             szabalyokDataGridView.DataSource = null;
             szabalyokDataGridView.Rows.Clear();
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog(); //Be lehet állítani a kiterjesztést
+            openFileDialog.Filter = "csv files (*.csv) |*.csv| All files(*.*)|*.*";
             openFileDialog.ShowDialog();
 
             if (openFileDialog.FileName.EndsWith(".csv"))
@@ -167,7 +173,6 @@ namespace Beadando
                 catch (FileNotFoundException ex)
                 {
                     throw new FileNotFoundException("Nem létezik a file.");
-                    warningLbl.Text = "Nem létezik a file!";
                 }
             }
             else
@@ -185,5 +190,30 @@ namespace Beadando
             return tartalom;
         }
 
+        private void standardBtn_Click(object sender, EventArgs e)
+        {
+            if(convertedInputTxtBx.Text != "")
+            {
+                inputSzalag = convertedInputTxtBx.Text;
+                if (!inputSzalag.EndsWith("#"))
+                {
+                    inputSzalag += "#";
+                }
+            }
+            else
+            {
+                warningLbl.Text = "Adjon meg adatot";
+            }
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            szabalyokDataGridView.Width = Convert.ToInt32(this.Width * 0.70);
+            szabalyokDataGridView.Height = Convert.ToInt32(this.Height * 0.8);
+            stepsTxtBx.Left = Convert.ToInt32(this.Width * 0.73);
+            stepsTxtBx.Width = Convert.ToInt32(this.Width * 0.25);
+            stepsTxtBx.Height = Convert.ToInt32(this.Height * 0.8);
+            
+        }
     }
 }

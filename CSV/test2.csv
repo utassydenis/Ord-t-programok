@@ -1,0 +1,12 @@
+﻿;a;b;c;d;e;#
+S;(ABC,1);(ABC,1);(ABC,1);(ABC,1);(ABC,1);
+A;(a,2);(Bbc,3);(Bbc,3);(Ccd,4);(Ccd,4);
+B;;(bBb,5);(cCc,6);;;
+C;;;;(dDd,7);(Dd,8);
+D;;;;;(e,9);
+a;pop;;;;;
+b;;pop;;;;
+c;;;pop;;;
+d;;;;pop;;
+e;;;;;pop;
+#;;;;;;accept

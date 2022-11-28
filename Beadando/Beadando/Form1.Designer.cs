@@ -41,6 +41,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.stepsTxtBx = new System.Windows.Forms.RichTextBox();
             this.warningLbl = new System.Windows.Forms.Label();
+            this.standardBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.szabalyokDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // 
             // inputTxtBx
             // 
+            this.inputTxtBx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputTxtBx.Location = new System.Drawing.Point(129, 35);
             this.inputTxtBx.Name = "inputTxtBx";
             this.inputTxtBx.Size = new System.Drawing.Size(535, 20);
@@ -61,6 +63,7 @@
             // 
             // pathTxtBx
             // 
+            this.pathTxtBx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pathTxtBx.Location = new System.Drawing.Point(129, 87);
             this.pathTxtBx.Name = "pathTxtBx";
             this.pathTxtBx.Size = new System.Drawing.Size(535, 20);
@@ -68,6 +71,7 @@
             // 
             // convertedInputTxtBx
             // 
+            this.convertedInputTxtBx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.convertedInputTxtBx.Location = new System.Drawing.Point(129, 61);
             this.convertedInputTxtBx.Name = "convertedInputTxtBx";
             this.convertedInputTxtBx.Size = new System.Drawing.Size(535, 20);
@@ -75,6 +79,7 @@
             // 
             // inputOKBtn
             // 
+            this.inputOKBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputOKBtn.Location = new System.Drawing.Point(688, 33);
             this.inputOKBtn.Name = "inputOKBtn";
             this.inputOKBtn.Size = new System.Drawing.Size(75, 23);
@@ -85,6 +90,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(88, 35);
             this.label1.Name = "label1";
@@ -94,6 +100,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 64);
             this.label2.Name = "label2";
@@ -103,6 +110,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(88, 89);
             this.label3.Name = "label3";
@@ -112,6 +120,7 @@
             // 
             // solveBtn
             // 
+            this.solveBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.solveBtn.Location = new System.Drawing.Point(867, 30);
             this.solveBtn.Name = "solveBtn";
             this.solveBtn.Size = new System.Drawing.Size(75, 23);
@@ -122,7 +131,8 @@
             // 
             // browseBtn
             // 
-            this.browseBtn.Location = new System.Drawing.Point(688, 84);
+            this.browseBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.browseBtn.Location = new System.Drawing.Point(688, 90);
             this.browseBtn.Name = "browseBtn";
             this.browseBtn.Size = new System.Drawing.Size(75, 23);
             this.browseBtn.TabIndex = 9;
@@ -144,6 +154,7 @@
             // 
             // warningLbl
             // 
+            this.warningLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.warningLbl.AutoSize = true;
             this.warningLbl.Location = new System.Drawing.Point(788, 90);
             this.warningLbl.Name = "warningLbl";
@@ -151,11 +162,23 @@
             this.warningLbl.TabIndex = 11;
             this.warningLbl.Text = "label4";
             // 
+            // standardBtn
+            // 
+            this.standardBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.standardBtn.Location = new System.Drawing.Point(688, 62);
+            this.standardBtn.Name = "standardBtn";
+            this.standardBtn.Size = new System.Drawing.Size(75, 23);
+            this.standardBtn.TabIndex = 12;
+            this.standardBtn.Text = "OK";
+            this.standardBtn.UseVisualStyleBackColor = true;
+            this.standardBtn.Click += new System.EventHandler(this.standardBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 606);
+            this.Controls.Add(this.standardBtn);
             this.Controls.Add(this.warningLbl);
             this.Controls.Add(this.stepsTxtBx);
             this.Controls.Add(this.browseBtn);
@@ -170,6 +193,7 @@
             this.Controls.Add(this.szabalyokDataGridView);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.szabalyokDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,6 +215,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox stepsTxtBx;
         private System.Windows.Forms.Label warningLbl;
+        private System.Windows.Forms.Button standardBtn;
     }
 }
 

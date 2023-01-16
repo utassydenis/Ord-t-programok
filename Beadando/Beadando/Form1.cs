@@ -25,7 +25,6 @@ namespace Beadando
             InitializeComponent();
             warningLbl.Text = "";
             verem = new Stack<string>();
-            //verem.Push("#");
         }
 
         private void inputOKBtn_Click(object sender, EventArgs e)
@@ -54,10 +53,6 @@ namespace Beadando
                     inputSzalag += "#";
                 }
                 convertedInputTxtBx.Text = inputSzalag;
-                /*
-                combo = new Tuple<string, string, string>(inputSzalag, veremTartalom(), szabaly);
-                stepsTxtBx.AppendText("\n"+combo+"\n");
-                */
 
                 warningLbl.Text = "Input sikeresen átadva.";
             }
@@ -133,6 +128,9 @@ namespace Beadando
                     combo = new Tuple<string, string, string>(inputSzalag.Substring(index), veremTartalom(), szabaly);
                     stepsTxtBx.AppendText(combo + "\n");
                 }
+                verem.Clear();
+                szabaly = "";
+                index= 0;
             }
             else
             {

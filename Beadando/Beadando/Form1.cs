@@ -128,9 +128,6 @@ namespace Beadando
                     combo = new Tuple<string, string, string>(inputSzalag.Substring(index), veremTartalom(), szabaly);
                     stepsTxtBx.AppendText(combo + "\n");
                 }
-                verem.Clear();
-                szabaly = "";
-                index= 0;
             }
             else
             {
@@ -192,6 +189,8 @@ namespace Beadando
         {
             if(convertedInputTxtBx.Text != "")
             {
+                index = 0;
+                szabaly = "";
                 inputSzalag = convertedInputTxtBx.Text;
                 if (!inputSzalag.EndsWith("#"))
                 {
